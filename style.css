@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background: #2b8288;
+  height: 8vh;
+}
+
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+.home{
+  padding-top: 200px;
+  align-items: center;
+  display: flex;
+  background-color: #5cb3b3;
+
+
+}
+.home .home-title{
+  display:inline-flexbox;
+  font-size: 45px;
+  color: #d9eef3;
+  padding: 80px;
+  margin-top: -200px;
+
+}
+.home-title p {
+  color: rgb(253, 236, 0);
+  animation: slideIn 1s ease-out; /* Aplica a animação */
+}
+.img-home{
+  padding-bottom: 100px;
+  padding-left: -100px;
+  margin-left: 100px;
+  
+
+}
+.home-title h1 {
+  display: flex;
+  gap: 10px;
+  font-size: 60px;
+  margin-right: 0;
+  animation: slideIn 1s ease-out; /* Aplica a animação */
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px); /* Começa abaixo */
+    opacity: 0; /* Começa invisível */
+  }
+  100% {
+    transform: translateY(0); /* Vai para a posição original */
+    opacity: 1; /* Fica visível */
+  }
+}
+
+
+
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.inicio{
+    padding: 1000px;
+}
+.img-logo{
+  height: 34px;
+  margin-bottom: -9px;
+  
+}
+/* Alinhamento dos cards e estilos básicos */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  background-color:#fff;
+
+}
+
+.servicesCard {
+  margin-top: 200px;
+  flex: 1 1 calc(20% - 20px); /* Define que cada card ocupará 20% da largura */
+  box-sizing: border-box;
+  background-color:#5cb3b3; /* Cor de fundo dos cards */
+  padding: 40px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+
+/* Estilo para o título dentro dos cards */
+.servicesCard h3 {
+  font-family: 'Montserrat', sans-serif; /* Fonte para o título */
+  font-weight: 700;
+  font-size: 20px;
+  color:#d9eef3; /* Cor do título */
+  margin-bottom: 10px;
+}
+
+/* Estilo para o texto dentro dos cards */
+.servicesCard p {
+  font-family: 'Montserrat', sans-serif; /* Fonte do texto */
+  font-size: 20px;
+  color:#d9eef3; /* Cor do texto */
+  line-height: 1.5;
+}
+
+/* Efeito ao passar o mouse sobre o card */
+.servicesCard:hover {
+  transform: translateY(-10px); /* Elevação do card */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .servicesCard {
+      flex: 1 1 calc(48% - 20px); /* Dois cards por linha em telas médias */
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesCard {
+      flex: 1 1 100%; /* Um card por linha em telas pequenas */
+      
+  }
+}
+
+
+
+.about{
+  height: 50px;
+  background-color:#fff;
+  margin: 20px 0  20px 0;
+  text-align: center;
+  padding: 200px;
+  color:#5cb3b3 ;
+  font-size: 30px;
+  
+}
+
+
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #2b8288;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-title {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .home-title h1 {
+    display: flex;  /* Faz com que os elementos fiquem lado a lado */
+    gap: 10px; /* Adiciona um pequeno espaçamento entre as palavras */
+    flex-direction: column; /* Empilha se for necessário */
+    font-size: 40px;
+    
+    margin-right: 0; /* Removi o margin-right de 200px para centralizar corretamente */
+  }
+  
+
+  .home-title p {
+    font-size: 30px;
+  }
+
+  .img-home img {
+    max-width: 80%;
+    margin-left: -100px;
+  }
+  .about {
+    padding-top: 0;
+    font-size: 16px; /* Tamanho de fonte maior para melhor leitura */
+    text-align: center; /* Alinha o texto ao centro */
+    width: 100%; /* Garante que a largura ocupe toda a tela */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+    margin-left: -200px;
+    height: 200px;
+    
+}
+.servicesCard{
+  margin-top: 15px;
+  
+}
+
+}
+.profissionais {
+  color: #d9eef3;
+  background-color: #5cb3b3;
+  font-size: 25px;
+  margin-top: 200px;
+  text-align: center;
+  height: 50vh;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;  /* Impede a exibição de imagens fora da área visível */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  height: 400px;
+  width: 100%;  /* Agora ocupa 100% do contêiner */
+
+  object-fit: cover;
+  margin: 20px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+      height: 300px;
+  }
+}
