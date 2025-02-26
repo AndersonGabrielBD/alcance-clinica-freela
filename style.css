@@ -39,6 +39,7 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
+  overflow-x: hidden;
 }
 
 .nav-list li {
@@ -186,56 +187,6 @@ nav {
   transform: translateY(-10px); /* Elevação do card */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
 }
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .servicesCard {
-      flex: 1 1 calc(48% - 20px); /* Dois cards por linha em telas médias */
-  }
-  .nav-list {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Inicialmente fora da tela */
-    width: 50%;
-    height: 100vh;
-    background: #2b8288;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: right 0.3s ease-in-out;
-  }
-
-  .nav-list.active {
-    right: 0; /* Traz o menu para a tela */
-  }
-
-  .nav-list li {
-    margin: 20px 0;
-  }
-
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
-
-  .mobile-menu.active div {
-    background: #fff;
-  }
-}
-
-@media (max-width: 480px) {
-  .servicesCard {
-      flex: 1 1 100%; /* Um card por linha em telas pequenas */
-  }
-  
-
-}
-
-
-
 .about{
   height: 50px;
   background-color:#fff;
@@ -249,6 +200,61 @@ nav {
 
 
 
+
+.profissionais {
+  color: #d9eef3;
+  background-color: #5cb3b3;
+  font-size: 25px;
+  margin-top: 200px;
+  text-align: center;
+  height: 50vh;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;  /* Impede a exibição de imagens fora da área visível */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  height: 400px;
+  width: 100%;  /* Agora ocupa 100% do contêiner */
+
+  object-fit: cover;
+  margin: 20px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
 @media (max-width: 999px) {
   body {
     overflow-x: hidden;
@@ -316,63 +322,33 @@ nav {
 }
 
 }
-.profissionais {
-  color: #d9eef3;
-  background-color: #5cb3b3;
-  font-size: 25px;
-  margin-top: 200px;
-  text-align: center;
-  height: 50vh;
-  position: relative;
-}
 
-.slider {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;  /* Impede a exibição de imagens fora da área visível */
-}
+@media (max-width: 480px) {
+  .servicesCard {
+      flex: 1 1 100%; /* Um card por linha em telas pequenas */
+  }
+  
 
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.card {
-  height: 400px;
-  width: 100%;  /* Agora ocupa 100% do contêiner */
-
-  object-fit: cover;
-  margin: 20px;
-}
-
-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1;
-}
-
-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
 }
 
 @media (max-width: 768px) {
   .card {
       height: 300px;
+  }
+  .nav-list {
+    position: absolute;
+ 
+    left: 100%; /* Mantém o menu fora da tela */
+    width: 250px;
+    height: 100vh;
+    background: #2b8288;
+    flex-direction: column;
+    align-items: center;
+    
+    transition: left 0.3s ease-in-out;
+  }
+
+  .nav-list.active {
+    left: calc(100% - 250px); /* Move o menu para dentro da tela */
   }
 }

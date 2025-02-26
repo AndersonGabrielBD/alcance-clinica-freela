@@ -25,15 +25,7 @@ class MobileNavbar {
     this.navList.classList.toggle(this.activeClass);
     this.mobileMenu.classList.toggle(this.activeClass);
     this.animateLinks();
-    
-    // Previne que o body role para o lado quando o menu está aberto
-    if (this.navList.classList.contains(this.activeClass)) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-}
-
+  }
 
   addClickEvent() {
     this.mobileMenu.addEventListener("click", this.handleClick);
