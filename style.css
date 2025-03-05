@@ -160,7 +160,7 @@ nav {
   box-sizing: border-box;
   background-color:#5cb3b3; /* Cor de fundo dos cards */
   padding: 40px;
-  height: 300px;
+  height: 350px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease; /* Efeito de transição ao passar o mouse */
@@ -183,13 +183,14 @@ nav {
   line-height: 1.5;
 }
 
+
 /* Efeito ao passar o mouse sobre o card */
 .servicesCard:hover {
   transform: translateY(-10px); /* Elevação do card */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
 }
 .about{
-  height: 50px;
+  height: 200px;
   background-color:#fff;
   margin: 20px 0  20px 0;
   text-align: center;
@@ -200,7 +201,12 @@ nav {
 }
 
 
-
+.slide{
+  height: 500px;
+  width: 400px;
+  padding: 20px;
+  border: 10px solid #2b8288;
+}
 
 .profissionais {
   color: #d9eef3;
@@ -208,7 +214,7 @@ nav {
   font-size: 25px;
   margin-top: 200px;
   text-align: center;
-  height: 50vh;
+  height: 500px;
   position: relative;
 }
 
@@ -227,7 +233,6 @@ nav {
 .card {
   height: 400px;
   width: 100%;  /* Agora ocupa 100% do contêiner */
-
   object-fit: cover;
   margin: 20px;
 }
@@ -256,9 +261,82 @@ button:hover {
 .next {
   right: 0;
 }
+.footer {
+    background: #2b8288;
+    color: #fff;
+    padding: 50px 10%;
+    text-align: start;
+    
+}
+.footer p, a{
+  color: rgb(241, 241, 238);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    gap: 100px;
+}
+.insta i{
+
+  color: rgb(212, 87, 139);
+  padding-right: 10px;
+}
+.whats i{
+  color: rgb(82, 221, 27);
+  padding-right: 10px;
+}
+.direitos{
+  margin-left: 200px;
+}
+
+.galeria-section{
+  display: inline-flexbox;  
+  columns: 3;
+  align-items: center;
+  align-content: center;
+  column-gap:50px;
+  padding: 30px;
+  background-color:#f0f0f0;
+  margin-left: 50px;
+}
+.galeria-text{
+  color: #5cb3b3;
+  text-align: center;
+}
+.galleryimage{
+  height: 300px;
+  width: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+
+
+}
+.galleryimage:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
 @media (max-width: 999px) {
+  .galeria-section{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .galeria-text{
+    font-size: 30px;
+  }
   body {
     overflow-x: hidden;
+  }
+ 
+  .footer-content{
+    display: flexbox;
+    padding-block-start: 20px;
+ 
   }
   .nav-list {
     position: absolute;
@@ -279,6 +357,9 @@ button:hover {
   }
   .mobile-menu {
     display: block;
+  }
+  .img-logo-home{
+   margin-left:-50px ;
   }
   .home {
     flex-direction: column;
@@ -314,7 +395,7 @@ button:hover {
     width: 100%; /* Garante que a largura ocupe toda a tela */
     line-height: 1.5; /* Espaçamento entre as linhas */
     margin-left: -200px;
-    height: 200px;
+    height: 100px;
     
 }
 .servicesCard{
@@ -326,7 +407,7 @@ button:hover {
 
 @media (max-width: 480px) {
   .servicesCard {
-      flex: 1 1 100%; /* Um card por linha em telas pequenas */
+      flex: 1 1 100%; 
   }
   
 
