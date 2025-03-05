@@ -308,7 +308,7 @@ button:hover {
   align-content: center;
   column-gap:50px;
   padding: 30px;
-  background-color:#f0f0f0;
+  background-color: #fff;
   margin-left: 50px;
 }
 .galeria-text{
@@ -321,8 +321,6 @@ button:hover {
   width: 500px;
   margin-top: 50px;
   border-radius: 10px;
-
-
 }
 .galleryimage:hover{
   transform: translateY(-10px);
@@ -401,10 +399,10 @@ button:hover {
   }
   .about {
     padding-top: 0;
-    font-size: 16px; /* Tamanho de fonte maior para melhor leitura */
-    text-align: center; /* Alinha o texto ao centro */
-    width: 100%; /* Garante que a largura ocupe toda a tela */
-    line-height: 1.5; /* Espaçamento entre as linhas */
+    font-size: 16px; 
+    text-align: center; 
+    width: 100%; 
+    line-height: 1.5; 
     margin-left: -200px;
     height: 100px;
     
@@ -432,7 +430,7 @@ button:hover {
   .nav-list {
     position: absolute;
     max-width: 100%;
-    left: 100%; /* Mantém o menu fora da tela */
+    left: 100%; 
     width: 250px;
     height: 100vh;
     background: #2b8288;
@@ -443,6 +441,6 @@ button:hover {
   }
 
   .nav-list.active {
-    left: calc(100% - 250px); /* Move o menu para dentro da tela */
+    left: calc(100% - 250px); 
   }
 }
