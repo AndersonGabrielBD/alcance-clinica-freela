@@ -12,7 +12,7 @@ Design responsivo, adaptável a diferentes tamanhos de tela.
 Apresentação clara dos serviços oferecidos pela clínica.
 A página foi desenvolvida para ser de fácil manutenção e expansão, caso a clínica deseje adicionar novos serviços ou atualizações no futuro.
 
-
+Link para ver projeto online: https://alcanceclinica.netlify.app/
 
 ![desktop](desktop2.png)
 
